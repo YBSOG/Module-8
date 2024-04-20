@@ -15,9 +15,11 @@ document.querySelector('#btnInputMin').addEventListener('click', function(){
     minValue = (minValue >= -999) ? minValue : -999;
     InputMin.value = '';
     document.querySelector('#minValueField').textContent = `Минимальное значение: ${minValue}`
-    if (maxValue !== undefined && minValue < maxValue) gameStart();
-    // console.log(typeof minValue);
-    // console.log(minValue);
+    if (maxValue !== undefined && minValue < maxValue) { 
+        document.querySelector('#btnInputMin').disabled = true;
+        document.querySelector('#btnInputMax').disabled = true;
+        gameStart()
+    };
 });
 
 //Получаем максимальное значение
@@ -29,9 +31,10 @@ document.querySelector('#btnInputMax').addEventListener('click', function(){
     maxValue = (maxValue <= 999) ? maxValue : 999;
     InputMax.value = '';
     document.querySelector('#maxValueField').textContent = `Максимальное значение: ${maxValue}`;
-    // console.log(maxValue);
-    // console.log(typeof maxValue);
-    if (minValue !== undefined && minValue < maxValue) gameStart ();
+    if (minValue !== undefined && minValue < maxValue) {
+        document.querySelector('#btnInputMax').disabled = true;
+        document.querySelector('#btnInputMin').disabled = true;
+        gameStart ()};
 });
 
 //Начало игры
@@ -86,6 +89,8 @@ document.querySelector('#btnRetry').addEventListener('click', function () {
     orderNumberField.innerText = 1;
     minValue = undefined;
     maxValue = undefined;
+    document.querySelector('#btnInputMin').disabled = false;
+    document.querySelector('#btnInputMax').disabled = false;
     gameStart ();
 });
 
