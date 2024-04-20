@@ -1,0 +1,42 @@
+.game-card {
+    height: 100vh;
+    font-family: 'Open Sans', monospace;
+}
+
+body {
+    background-image: linear-gradient(to right, #dea7ee, #f484d1);
+}
+
+input {
+    border-radius: 0.25rem;
+    border: 1px solid #bdbdbd;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    font-family: inherit;
+}
+p {
+    margin-bottom: 0;
+}
+
+.fieldForInput {
+    text-align: left;
+    font-family: 'Open Sans', monospace;
+    font-size: 1.05rem;
+    font-weight: 600;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 4px;
+}
+
+#btnInputMin #btnInputMax {
+    padding: -0.5rem 1.25rem;
+    font-size: 0.9rem;
+    margin: 15px;
+}
+
+.btn-link {
+    font-weight: 500;
+    color: black;
+}
